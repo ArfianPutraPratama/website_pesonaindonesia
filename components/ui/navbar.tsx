@@ -128,8 +128,8 @@ export function Navbar() {
 
 const Logo = ({ className }: { className?: string }) => {
     return (
-        <div suppressHydrationWarning className={cn("flex items-center gap-2", className)}>
-            <div suppressHydrationWarning className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg">
+        <div className={cn("flex items-center gap-2", className)}>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">
                 P
             </div>
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-white/60">

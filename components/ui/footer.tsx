@@ -2,13 +2,15 @@ import Link from "next/link";
 import React from "react";
 
 export function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer id="about" suppressHydrationWarning className="bg-neutral-50 dark:bg-black border-t border-black/5 dark:border-white/10 py-12 md:py-16 relative z-50 transition-colors duration-500">
-            <div suppressHydrationWarning className="max-w-7xl mx-auto px-6 md:px-10">
-                <div suppressHydrationWarning className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
-                    <div suppressHydrationWarning className="md:col-span-2">
+        <footer id="about" className="bg-neutral-50 dark:bg-black border-t border-black/5 dark:border-white/10 py-12 md:py-16 relative z-50 transition-colors duration-500">
+            <div className="max-w-7xl mx-auto px-6 md:px-10">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
+                    <div className="md:col-span-2">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <div suppressHydrationWarning className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg">
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg" aria-hidden="true">
                                 P
                             </div>
                             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-white/60">
@@ -70,7 +72,7 @@ export function Footer() {
 
                 <div className="border-t border-black/5 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-neutral-500 text-xs">
-                        © {new Date().getFullYear()} Pesona Indonesia Interactive. All rights reserved.
+                        © {currentYear} Pesona Indonesia Interactive. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <Link href="#" className="text-neutral-500 hover:text-black dark:hover:text-white text-xs transition-colors">

@@ -60,11 +60,11 @@ export function Preloader() {
         setIsMounted(true);
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 4500); // Extended for icon sequence
+        }, 3000); // Optimized for better UX (from 4.5s)
 
         const iconInterval = setInterval(() => {
             setIndex((prev) => (prev + 1) % REGIONS.length);
-        }, 1200);
+        }, 800); // Slightly faster icon cycle
 
         return () => {
             clearTimeout(timer);
